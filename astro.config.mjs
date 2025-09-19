@@ -6,13 +6,11 @@ import NetlifyCMS from "astro-netlify-cms";
 import dcapConfig from "./decap.config.mjs";
 import astropodConfig from "./.astropod/astropod.config.json";
 import robotsTxt from "astro-robots-txt";
-
-// https://astro.build/config
 import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: astropodConfig.site,
+  site: astropodConfig.site, // 这里保持你原来的 astropodConfig.site
   integrations: [
     robotsTxt({
       policy: [
@@ -35,4 +33,9 @@ export default defineConfig({
       config: dcapConfig(),
     }),
   ],
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 2000, // 新增：调整 chunk size 警告阈值
+    },
+  },
 });
