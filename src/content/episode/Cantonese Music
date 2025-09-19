@@ -1,0 +1,35 @@
+---
+const SRC = "https://archive.org/embed/15-800.-7z?playlist=1";
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>经典粤语老歌 800 首</title>
+    <style>
+      :root { --pad: 16px; }
+      body {
+        margin: 0; padding: var(--pad);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        background:#fafafa; color:#111; line-height:1.5;
+      }
+      h1 { margin: 0 0 12px; font-size: clamp(20px, 5.5vw, 28px); text-align:center; }
+      .wrap { max-width: 1100px; margin: 0 auto; }
+      /* 让播放器和列表在手机上更大，并可滚动 */
+      iframe {
+        display:block; width:100%;
+        height: clamp(640px, 100vh - 140px, 980px);
+        border:0; overflow:auto;
+      }
+      .hint { text-align:center; font-size: clamp(14px, 3.8vw, 16px); color:#666; margin:8px 0 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>经典粤语老歌 800 首</h1>
+      <iframe src={SRC} allowfullscreen></iframe>
+      <div class="hint">可上下滚动查看完整曲目列表</div>
+    </div>
+  </body>
+</html>
