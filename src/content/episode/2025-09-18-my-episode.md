@@ -1,47 +1,11 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>经典粤语老歌 800 首</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background: #fafafa;
-      color: #222;
-    }
-    h1 {
-      font-size: 1.6rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .player-wrap {
-      max-width: 100%;
-      margin: 0 auto;
-    }
-    iframe {
-      width: 100%;
-      height: 850px; /* 高度可调 */
-      border: none;
-    }
-    /* 让手机屏幕上的文字更大 */
-    @media (max-width: 600px) {
-      body { font-size: 1.2rem; }
-      h1 { font-size: 1.4rem; }
-      iframe { height: 700px; }
-    }
-  </style>
-</head>
-<body>
-  <h1>经典粤语老歌 800 首</h1>
-  <div class="player-wrap">
-    <!-- 带完整曲目列表的 archive.org 播放器 -->
-    <iframe 
-      src="https://archive.org/embed/15-800.-7z?playlist=1"
-      allowfullscreen
-    ></iframe>
-  </div>
-</body>
-</html>
+<div style="max-width:1100px;margin:0 auto;font-size:clamp(15px,3.8vw,18px);line-height:1.55;">
+  <h2 style="text-align:center;font-size:clamp(20px,5.5vw,28px);margin:0 0 12px;">
+    经典粤语老歌 800 首
+  </h2>
+  <iframe
+    src="https://archive.org/embed/15-800.-7z?playlist=1"
+    style="display:block;width:100%;height:clamp(640px,100vh - 140px,980px);border:0;overflow:auto;"
+    allowfullscreen
+  ></iframe>
+  <p style="text-align:center;color:#666;margin-top:8px;">可上下滚动查看完整曲目列表</p>
+</div>
